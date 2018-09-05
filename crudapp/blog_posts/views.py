@@ -1,7 +1,11 @@
 from django.shortcuts import render
+from django import forms
+from . import models
+
+from django.forms import ModelForm
 
 # Create your views here.
-class PostsForm(ModelForm):
+class PostsForm(forms.ModelForm):
     class Meta:
         model = blog_posts
         fields = {'id', 'title', 'author'}
