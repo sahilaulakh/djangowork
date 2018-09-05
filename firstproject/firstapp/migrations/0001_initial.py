@@ -13,28 +13,28 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='AccessRecord',
             fields=[
-                ('id', models.AutoField(serialize=False, verbose_name='ID', auto_created=True, primary_key=True)),
+                ('id', models.AutoField(primary_key=True, auto_created=True, verbose_name='ID', serialize=False)),
                 ('date', models.DateField()),
             ],
         ),
         migrations.CreateModel(
             name='Topic',
             fields=[
-                ('id', models.AutoField(serialize=False, verbose_name='ID', auto_created=True, primary_key=True)),
-                ('top_name', models.CharField(unique=True, max_length=264)),
+                ('id', models.AutoField(primary_key=True, auto_created=True, verbose_name='ID', serialize=False)),
+                ('top_name', models.CharField(max_length=264, unique=True)),
             ],
         ),
         migrations.CreateModel(
-            name='WebPage',
+            name='Webpage',
             fields=[
-                ('id', models.AutoField(serialize=False, verbose_name='ID', auto_created=True, primary_key=True)),
-                ('name', models.CharField(unique=True, max_length=264)),
+                ('id', models.AutoField(primary_key=True, auto_created=True, verbose_name='ID', serialize=False)),
+                ('name', models.CharField(max_length=264, unique=True)),
                 ('topic', models.ForeignKey(to='firstapp.Topic')),
             ],
         ),
         migrations.AddField(
             model_name='accessrecord',
             name='name',
-            field=models.ForeignKey(to='firstapp.WebPage'),
+            field=models.ForeignKey(to='firstapp.Webpage'),
         ),
     ]

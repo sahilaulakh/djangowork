@@ -16,12 +16,12 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from firstapp import views
-#from django.conf.urls import include
+from django.conf.urls import include
 
 urlpatterns = [
-    url(r'^$',views.index, name = 'index'),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', views.index, name='index'),
     url(r'^consultadd/', include('firstapp.urls')),
-    #url(r'^$', views.fn1, name ='fn1'),
-    #url(r'^$', views.fn2, name = 'fn2'),
+    #url(r'^second/', include('firstapp.urls')),
+    #url(r'^third/', include('firstapp.urls')),
 ]

@@ -1,8 +1,8 @@
 from django.contrib import admin
 
 # Register your models here.
-from firstapp.models import Topic, WebPage, AccessRecord
+from firstapp.models import Topic, Webpage, AccessRecord
 
 admin.site.register(Topic)
-admin.site.register(WebPage)
+admin.site.register(Webpage)
 admin.site.register(AccessRecord)

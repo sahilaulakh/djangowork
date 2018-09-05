@@ -1,9 +1,8 @@
 from django.conf.urls import url
-from . import views
+from firstapp import views
 
-urlpatters = [
-    url(r'^index$', views.index, name='index'),
-    #url(r'^$', views.fn1, name ='fn1'),
-    #url(r'^$', views.fn2, name = 'fn2'),
-
+urlpatterns = [
+     url(r'^$', views.index, name='index'),
+     #url(r'^secfunction/', views.secfunction, name='secfunction'),
+     #url(r'^thirdfunction/', views.thirdfunction, name='thirdfunction'),
 ]
