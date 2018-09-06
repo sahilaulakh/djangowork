@@ -1,6 +1,8 @@
 from django import forms
 
 class FormName(forms.Form):
-    username = forms.CharField()
-    email = forms.EmailField()
-    text = forms.CharField(widget=forms.Textarea)
+    Title = forms.CharField()
+    Author = forms.EmailField()
+    Description = forms.CharField(widget=forms.Textarea)
+    CreationDate = forms.DateField()
+    Location = forms.CharField()
